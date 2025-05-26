@@ -1,42 +1,41 @@
 # Project_Struktur_Data_Kelompok-9
 Tugas UAS Struktur Data - Membuat Peta dan GPS Sederhana
 
-Tujuan dari tugas ini adalah membuat representasi **graph** peta dengan 10 kota sebagai *vertex* dan 30 jalur sebagai *edge*, serta menerapkan algoritma **Dijkstra** dan **TSP (Traveling Salesman Problem).**
-
-Setiap mode transportasi memiliki graph (peta) sendiri dengan bobot berbeda yang merepresentasikan **waktu tempuh** antar kota.
-
-### **📋 Instruksi Tugas:**
-
-### **1. Representasi Grafik:**
-
-1. Implementasikan struktur data graph dalam bahasa Python.
-2. Buat 1 graph
-3. Tiap graph harus memiliki:
-    - **10 vertex** (nama kota bisa bebas).
-    - **30 edge** yang mewakili jalan antar kota.
-    - Bobot berupa **perkiraan waktu tempuh** dalam kilometer.
-4. Pastikan semua graph **terhubung** (*connected graph*).
-5. Jelaskan dan gambarkan ketiga graph di laporan (gambar manual/digital).
+Repositori ini merupakan hasil tugas akhir mata kuliah **Struktur Data** yang mengimplementasikan struktur data **graph** berbobot tidak berarah untuk membangun **peta dan sistem GPS sederhana** antar kota di Inggris. Program ditulis menggunakan bahasa **Python** dan dilengkapi dengan visualisasi graf menggunakan pustaka `networkx` dan `matplotlib`.
 
 ---
 
-### **2. Algoritma Shortest Path dan TSP:**
+## ✨ Fitur Utama
 
-### **A. Dijkstra (untuk ketiga graph):**
+- ✅ Representasi **graph** dengan 10 vertex (kota) dan 30 edge (jalur)
+- ✅ Implementasi algoritma **Dijkstra** untuk mencari rute tercepat antar dua kota
+- ✅ Simulasi algoritma **TSP (Traveling Salesman Problem)** dengan brute-force
+- ✅ Input interaktif dari pengguna (kota asal & tujuan)
+- ✅ Visualisasi grafis dengan highlight pada jalur terpendek
 
-1. Terapkan algoritma **Dijkstra** untuk menemukan rute tercepat dari **kota sumber ke kota tujuan**, untuk masing-masing mode transportasi.
-2. Minta pengguna untuk memilih:
-    - **Kota asal dan kota tujuan**
-3. Tampilkan:
-    - **Jalur tercepat**
-    - **Total jarak ditempuh**
-4. Jelaskan cara kerja algoritma Dijkstra di laporan.
+---
 
-### **B. Traveling Salesman Problem:**
+## 🗂️ Struktur File
 
-1. Terapkan algoritma **TSP sederhana** (brute-force) untuk masing-masing graph.
-2. Temukan urutan perjalanan paling efisien yang mengunjungi semua kota **sekali**.
-3. Tampilkan:
-    - **Rute TSP terbaik**
-    - **Total jarak tempuh**
-4. Jelaskan Algoritma dan cara kerja TSP di laporan.
+|   File / Folder   |                     Deskripsi                  |
+|-------------------|------------------------------------------------|
+| `peta_inggris.py` | File utama program Python                      |
+| `README.md`       | Dokumentasi repositori                         |
+
+---
+
+## ▶️ Cara Menjalankan Program
+
+1. Pastikan kamu sudah menginstall **Python 3.x**  
+2. Install pustaka yang dibutuhkan:
+   ```bash
+   pip install networkx matplotlib
+   
+3. Jalankan program:
+python main.py
+
+4. Masukkan kota asal dan tujuan sesuai daftar yang tersedia.
+   Masukkan kota asal     : Oxford
+   Masukkan kota tujuan   : Edinburgh
+
+5. Program akan menampilkan: Jalur tercepat (Dijkstra), Total jarak tempuh, Rute optimal TSP (mengunjungi semua kota sekali), dan Visualisasi graf
